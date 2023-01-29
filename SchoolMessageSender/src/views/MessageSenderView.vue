@@ -17,13 +17,6 @@ async function onMultipleSubmit(values){
     return await MessageStore.SendMultiple(values)
     .catch(error => setErrors({ apiError: error }));
 }
-
-async function onClassSubmit(values){
-    console.log(values)
-    const MessageStore = userMessageStore()
-    return await MessageStore.SendMultiple(values)
-    .catch(error => setErrors({ apiError: error }));
-}
 </script>
 
 

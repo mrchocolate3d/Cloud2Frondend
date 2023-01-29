@@ -82,13 +82,13 @@ export default {
                 <div class="invalid-feedback">{{errors.password}}</div>
             </div>
             <div class="form-group">
-                <label>Body</label>
-                <Field name="Body" class="form-control" :class="{ 'is-invalid': errors.password } " />
+                <label>Subject</label>
+                <Field name="Subject" class="form-control" :class="{ 'is-invalid': errors.password }" />
                 <div class="invalid-feedback">{{errors.password}}</div>
             </div>
             <div class="form-group">
-                <label>Subject</label>
-                <Field name="Subject" class="form-control" :class="{ 'is-invalid': errors.password }" />
+                <label>Body</label>
+                <Field name="Body" class="form-control" :class="{ 'is-invalid': errors.password } " />
                 <div class="invalid-feedback">{{errors.password}}</div>
             </div>
 

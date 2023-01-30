@@ -19,7 +19,7 @@ actions: {
 
           let Remail = values.ReceiverEmail.split(',')
           console.log(Remail)
-            axios.post('http://localhost/SendMultiple', {
+            axios.post('http://localhost:8080/SendMultiple', {
               SenderEmail: values.SenderEmail,
               SenderName: values.SenderName,
               ReceiverEmail:Remail,
@@ -39,7 +39,7 @@ actions: {
     async Send(values){
         try {
             console.log(values)
-            axios.post('http://localhost/Send', {
+            axios.post('http://localhost:8080/Send', {
                 SenderEmail: values.SenderEmail,
                 SenderName: values.SenderName,
                 ReceiverEmail: values.ReceiverEmail,
@@ -53,7 +53,7 @@ actions: {
             }     
     },
     async GetListOfStudents(id){
-      return axios.get('http://127.0.0.1:5000/v1/classes/ ' + id + '/students')
+      return axios.get('http://127.0.0.1:3000/v1/classes/' + id + '/students')
     },
     async SendClassMsg(values,students){
       console.log(values)
@@ -76,7 +76,7 @@ actions: {
       Remail.pop()
 
       try{
-        axios.post('http://localhost/SendMultiple', {
+        axios.post('http://localhost:8080/SendMultiple', {
           SenderEmail: values.SenderEmail,
           SenderName: values.SenderName,
           ReceiverEmail:Remail,

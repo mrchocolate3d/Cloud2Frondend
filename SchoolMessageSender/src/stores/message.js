@@ -92,6 +92,24 @@ actions: {
       } catch (error) {
         console.log(error);
       }
+      },
+      async NewStudent(values){
+        console.log(values)
+        try{
+          axios.post('http://127.0.0.1:3000/v1/students', {
+            class_id: values.class,
+            email: values.email,
+            firstname: values.firstname,
+            lastname: values.lastname,
+            phone: values.phone
+          })
+          .then((res) => {
+            console.log('This method is being passed')
+            console.log(res)
+          })
+        } catch (error) {
+          console.log(error);
+        }
       }
     
   }
